@@ -1,97 +1,52 @@
-# ==========================================
-# Project: Logic Box
-# Pattern Generator and Number Analyzer
-# ==========================================
-
-
-# ---------- Pattern Generator ----------
-
-def generate_pattern():
-    rows = int(input("Enter the number of rows for the pattern: "))
-
-    # Input validation
-    if rows <= 0:
-        print("Please enter a positive number of rows.")
-        return
-
-    print("\nPattern:")
-
-    # Nested loop
-    for i in range(1, rows + 1):
-        for j in range(i):
-            print("*", end="")
-        print()
-
-
-# ---------- Number Analyzer ----------
-
-def analyze_numbers():
-    start = int(input("Enter the start of the range: "))
-    end = int(input("Enter the end of the range: "))
-
-    # Input validation
-    if start > end:
-        print("Invalid range! Start number must be less than or equal to end number.")
-        return
-
-    total = 0
-
-    print()
-
-    # Analyze every number
-    for number in range(start, end + 1):
-
-        # Check Even or Odd
-        if number % 2 == 0:
-            print("Number", number, "is Even")
-        else:
-            print("Number", number, "is Odd")
-
-        # Calculate sum
-        total = total + number
-
-    print()
-    print("Sum of all numbers from", start, "to", end, "is:", total)
-
-
-# ---------- Main Program ----------
-
-print("==========================================")
-print("   Welcome to the Pattern Generator and")
-print("          Number Analyzer!")
-print("==========================================")
+print("Welcome to the Pattern Generator and Number Analyzer!")
 
 while True:
 
-    print("\nSelect an option:")
+    print()
+    print("Select an option:")
     print("1. Generate a Pattern")
     print("2. Analyze a Range of Numbers")
     print("3. Exit")
 
-    choice = input("Enter your choice: ")
+    choice = int(input("Enter your choice: "))
 
-    # Option 1
-    if choice == "1":
+    # Option 1 - Pattern
+    
+    if choice == 1:
 
-        try:
-            generate_pattern()
+        rows = int(input("Enter the number of rows for the pattern: "))
 
-        except ValueError:
-            print("Invalid input! Please enter a valid number.")
+        print()
+        print("Pattern:")
 
-    # Option 2
-    elif choice == "2":
+        for i in range(1, rows + 1):
+            print("*" * i)
 
-        try:
-            analyze_numbers()
+    # Option 2 - Number Analyzer
 
-        except ValueError:
-            print("Invalid input! Please enter valid numbers.")
+    elif choice == 2:
 
-    # Option 3
-    elif choice == "3":
+        print()
+        start = int(input("Enter the start of the range: "))
+        end = int(input("Enter the end of the range: "))
 
-        print("\nThank you for using Logic Box!")
+        total = 0
+
+        for i in range(start, end + 1):
+
+            if i % 2 == 0:
+                print("Number", i, "is Even")
+            else:
+                print("Number", i, "is Odd")
+
+            total = total + i
+
+        print("Sum of all numbers from", start, "to", end, "is:", total)
+
+    # Option 3 - Exit
+
+    elif choice == 3:
+
         print("Exiting the program. Goodbye!")
         break
 
