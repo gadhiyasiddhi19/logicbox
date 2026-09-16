@@ -14,7 +14,7 @@ This is a simple Python menu-driven program that allows users to:
 
 ## 🛠 Technologies Used
 
-* Python 3
+* Python 3.14.6
 
 ## 📂 Features
 
@@ -35,17 +35,18 @@ This is a simple Python menu-driven program that allows users to:
 
 ## ▶️ How to Run
 
-1. Install Python 3.
-2. Save the program as `pattern_analyzer.py`.
+1. Install Python 3.14.6.
+2. Save the program as `LogicBox.py`.
 3. Open Command Prompt or Terminal.
-4. Run:
+4. Run the program using:
 
 ```bash
-python pattern_analyzer.py
+python LogicBox.py
 ```
 
 ## 📸 Sample Output
 
+```text
 Welcome to the Pattern Generator and Number Analyzer!
 
 Select an option:
@@ -81,4 +82,4 @@ Select an option:
 2. Analyze a Range of Numbers
 3. Exit
 Enter your choice:
-
+```
